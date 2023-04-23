@@ -1,0 +1,27 @@
+%some-properties {
+    margin: 1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+
+*, html{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container {
+    @extend %some-properties;
+
+    input{
+        margin: .1rem 0;
+    }
+}
+
+.dynamic {
+    @extend %some-properties;
+
+    li{
+        list-style: none;
+    }
+}

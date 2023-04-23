@@ -1,0 +1,19 @@
+.dynamic, .container {
+  margin: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container input {
+  margin: 0.1rem 0;
+}
+
+.dynamic li {
+  list-style: none;
+}/*# sourceMappingURL=dinamic_ul.css.map */

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/dinamic_ul.css">
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" name="some_text" id="text_field">
+        <input type="button" value="Добавить" onclick="writeText()">
+    </div>
+
+    <ul class="dynamic"></ul>
+
+
+    <script>
+        let ul = document.querySelector(".dynamic");
+        let text = document.querySelector("#text_field");
+
+        function writeText() {
+            let li = document.createElement("li");
+            li.innerHTML = `${text.value}`;
+
+            ul.append(li);
+        }
+    </script>
+</body>
+</html>
