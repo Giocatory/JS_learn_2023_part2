@@ -7,13 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="redirect()">Go to Google</button>
+    <p>Paragraph<br></p>
 
     <script>
-        function redirect() {
-            if (confirm('Go to next page?')){
-                location.href = './pages/blue_page.html';
-            }
+        let paragraph = document.querySelector("p");
+        
+        for(let node of document.body.childNodes){
+            paragraph.innerHTML += node.innerHTML + "<br>";
         }
     </script>
 </body>
