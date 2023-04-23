@@ -11,7 +11,7 @@
 
     <div class="container">
         <input type="text" name="some_text" id="text_field">
-        <input type="button" value="Добавить" onclick="writeText()">
+        <input type="button" value="Добавить">
     </div>
 
     <ul class="dynamic"></ul>
@@ -27,6 +27,9 @@
 
             ul.append(li);
         }
+
+        let btn = document.querySelector('input[type="button"]');
+        btn.onclick = writeText;
     </script>
 </body>
 </html>
