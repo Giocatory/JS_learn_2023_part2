@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Paragraph<br></p>
+
+    <script>
+        let paragraph = document.querySelector("p");
+        
+        for(let node of document.documentElement.children){
+            paragraph.innerHTML += node.tagName + "<br>";
+        }
+
+        let body = document.body;
+        body.style.transition = "background-color 1s linear";
+        setInterval(()=>{body.style.backgroundColor = 'Aqua';}, 1500);
+        setInterval(()=>{body.style.backgroundColor = 'white';}, 3000);
+    </script>
+</body>
+</html>
