@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data-toggle-id="open_close_first_menu">первое меню</p>
+    <p data-toggle-id="open_close_second_menu">второе меню</p>
+
+    <ul id="open_close_first_menu" hidden>
+        <li>first menu item 1</li>
+        <li>first menu item 2</li>
+        <li>first menu item 3</li>
+    </ul>
+
+    <ul id="open_close_second_menu" hidden>
+        <li>second menu item 1</li>
+        <li>second menu item 2</li>
+        <li>second menu item 3</li>
+    </ul>
+
+    <script>
+        document.addEventListener('click', function(event){
+            let id = event.target.dataset.toggleId;
+
+            if(!id) return;
+
+            let element = document.getElementById(id);
+            element.hidden = !element.hidden;
+        })
+    </script>
+</body>
+</html>
